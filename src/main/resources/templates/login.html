@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+<head>
+<title>后台登录</title>
+<meta charset="UTF-8">
+<div th:replace="_sub_head_res :: head"></div>
+</head>
+<body class="login-bg">
+	<div id="sky" style="height: 150px;"></div>
+	<div class="login layui-anim layui-anim-up" >
+		<div class="message">管理登录</div>
+		<div id="darkbannerwrap"></div>
+
+		<form method="post" class="layui-form">
+			<input name="username" placeholder="用户名" type="text" lay-verify="required" class="layui-input">
+			<hr class="hr15">
+			<input name="password" lay-verify="required" placeholder="密码" type="password" class="layui-input">
+			<hr class="hr15">
+			<input value="登录" lay-submit lay-filter="login" style="width: 100%;" type="submit">
+			<hr class="hr20">
+		</form>
+	</div>
+	
+	<div th:replace="_sub_main_js :: main_js"></div>
+	<script type="text/javascript" th:src="@{/lib/jquery/jqlouds/jquery.jqlouds.min.js}"></script>
+	<script type="text/javascript" th:inline="javascript">
+	$(function() {
+	    layui.use(['form','jquery'], function() {
+	        var form = layui.form,$=layui.jquery;
+	        //监听提交
+	        form.on('submit(login)', function(data) {
+	            return true;
+	        });
+	      
+	        //设置被风吹动的云
+		    $('#sky').jQlouds({
+		        minClouds: 4,
+		        maxClouds: 7,
+		        wind: true
+		    })
+	    });
+	})
+	</script>
+</body>
+</html>
