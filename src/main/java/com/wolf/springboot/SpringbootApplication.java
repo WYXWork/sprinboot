@@ -19,7 +19,7 @@ import com.wolf.springboot.domain.BaseRepositoryImpl;
  * Description:
  * </p>
  * 
- * @author wyx
+ * @author wyx 
  * @date 2019年4月9日
  */
 @EnableCaching
