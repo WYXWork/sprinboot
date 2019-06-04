@@ -16,7 +16,7 @@ import com.wolf.springboot.domain.BaseRepositoryImpl;
  * Title: SpringbootApplication
  * </p>
  * <p>
- * Description:测试提交
+ * Description:测试提交2
  * </p>
  * 
  * @author wyx 
